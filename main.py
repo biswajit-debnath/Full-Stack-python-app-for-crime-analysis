@@ -207,7 +207,8 @@ def State_Analyz(State_df):
 
 	arr=DT_training_data_gen() 
 	#Placing the data array to data frame 
-	DTree_df= pd.read_csv("DTreeT.csv")
+	# DTree_df= pd.read_csv("DTreeT.csv")
+	DTree_df=pd.DataFrame(columns=['V_High', 'High','Low','V_Low','O_Label'])
 	x,y = np.shape(arr)
 	for i in range(0,x):
 	    df2=pd.DataFrame([arr[i][:]],columns=['V_High', 'High','Low','V_Low','O_Label'])
@@ -304,7 +305,7 @@ def Single_Crime_Analyz(State_df,crime):
 
 	arr=DT_training_data_gen() 
 	#Placing the data array to data frame 
-	DTree_df= pd.read_csv("DTreeT.csv")
+	DTree_df=pd.DataFrame(columns=['V_High', 'High','Low','V_Low','O_Label'])
 	x,y = np.shape(arr)
 	for i in range(0,x):
 	    df2=pd.DataFrame([arr[i][:]],columns=['V_High', 'High','Low','V_Low','O_Label'])
@@ -424,7 +425,7 @@ def Regional_Analyz():
 
 	arr=DT_training_data_gen() 
 	#Placing the data array to data frame 
-	DTree_df= pd.read_csv("DTreeT.csv")
+	DTree_df=pd.DataFrame(columns=['V_High', 'High','Low','V_Low','O_Label'])
 	x,y = np.shape(arr)
 	for i in range(0,x):
 	    df2=pd.DataFrame([arr[i][:]],columns=['V_High', 'High','Low','V_Low','O_Label'])
@@ -621,7 +622,8 @@ def State_Year_Analyz(state):
 
 
 
-# District_Clusters=State_Analyz(df_list['Manipur_Major_Data'])
+# District_Clusters=State_Analyz(df_list['Manipur'])
+
 # print(District_Clusters)
 
 # Single_Crime_Analyz(df_list['Manipur_Major_Data'],'RAPE')
